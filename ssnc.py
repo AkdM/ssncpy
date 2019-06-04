@@ -26,7 +26,7 @@ def arguments():
 def configuration():
     global serials
     config = configparser.ConfigParser()
-    config.read("config.ini")
+    config.read(os.path.join(sys.path[0], "config.ini"))
 
     try:
         serials_filename = config.get("SSNC", "SerialsJSON")
